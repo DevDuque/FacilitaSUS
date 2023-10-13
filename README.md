@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://devduque.github.io/FacilitaSUS/src/LoginPage.html"> FacilitaSUS </a>
+  <a href="https://devduque.github.io/FacilitaSUS/src/LoginPage.html" target="_blank"> FacilitaSUS </a>
 </h1>
   
 <p align="center">
