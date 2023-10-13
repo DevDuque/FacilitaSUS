@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fontes de letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <title> FacilitaSUS by DevDuque </title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/sus.svg">
+
+
+    <!-- Estilos CSS -->
+    <link rel = "stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/protocolosPage.css" />
+
+    
+</head>
+<body>
+    <div class="header">
+        <div class="header_left">
+            <a href="#">
+                <img src="./assets/icons/gov.svg" alt="GOV.BR.Logo"/>
+            </a>
+        </div>
+        
+        <!-- Icones no topo -->
+        <div class="header_icons">
+            <!-- HomeIcon -->
+            <a href="./home.html">
+                <img src="./assets/icons/home.svg" alt="HomeLogo" />
+                <p> Início </p>
+            </a>
+            
+            <!-- ProtocoloIcon -->
+            <a href="#"  id="active">
+                <img src="./assets/icons/linesActive.svg" alt="ProtocolosLogo"/>
+                <p> Protocolos </p>
+            </a>
+    
+            <!-- AtendimentoIcon -->
+            <a href="./Atendimento.html">
+                <img src="./assets/icons/post.svg" alt="AtendimentoLogo"/>
+                <p> Atendimento </p>
+            </a>
+    
+            <!-- NotificacaoIcon-->
+            <a href="#" id="linkNotification">
+                <img id="imageChange" src="./assets/icons/bell.svg" alt="NotificacaoLogo"/>
+                <p id="textChange"> Notificações </p>
+            </a>
+        </div>
+    
+        <!-- Icone no topo direito -->
+        <div class="header_right">
+            <a href="#">
+                <img src="./assets/icons/sus.svg" alt="SUSLogo"/>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="sidebar">
+            <!-- Sidebar -->
+            <div class="sidebar_container">
+            <h1>Artigos</h1>
+                <!-- Elementos da Sidebar -->
+                <div class="sidebar_category">
+                    <a href="#">
+                        <h2> Aqui tem um artigo </h2>
+                    <p>
+                        Resumo legal sobre o artigo
+                    </p>
+                </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="posts">
+            <h1> Protocolos </h1>
+            <!-- Posts -->
+            <div class="posts_container">
+                <!-- Protocolo 1 -->
+                <div class="post">
+                    <a href="./ProtocoloX.html">
+                        <h2> Documentos necessários para marcação de exames </h2>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed id semper risus in. </p>
+                    </a>
+                </div>
+
+                <div class="post">
+                    <a href="./ProtocoloX.html">
+                        <h2> Documentos necessários para marcação de exames </h2>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed id semper risus in. </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id ="notificationDiv" style="display: none;">
+            <div class="message">
+                <div class="content">
+                    <h1> Notificações </h1>
+                </div>
+                <a href="">
+                <div class="sub-content">
+                    <h2> Mensagem</h2>
+                    <h2> Tipo</h2>
+                </div>
+            <p> 
+                Conteúdo da mensagem... LALA
+                Conteúdo da mensagem... LALA
+                Conteúdo da mensagem... LALA
+                Conteúdo da mensagem... LALA
+            </p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="./scripts/notification.js"></script>
+     
+</body>
+</html>

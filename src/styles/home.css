@@ -1,0 +1,171 @@
+.sidebar, .others {
+    padding: 10px 15px;
+
+    /* Largura com 40% do disponivel */
+    width: 40%;
+
+    /* Altura com 100% do disponivel */
+    height: 100vh;
+
+    overflow-y: auto;
+<<<<<<< HEAD
+    overflow-x: hidden;
+=======
+>>>>>>> 333fa37c54c1e530395ae696e513cf6c5e554164
+}
+
+.posts {
+    /* Define a largura do container de protocolos */
+    width:100%; 
+    height: 100vh;
+
+    padding: 10px 15px;    
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: 2px solid #A7BFDE;
+    border-left: 2px solid #A7BFDE;
+
+}
+
+@media (max-width: 768px) {
+    .posts {
+        /* Largura 100% do disponivel*/
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove as bordas */
+        border: none;
+    }
+    
+    .sidebar,
+    .others {
+        display: flex;
+        /* Exibe os cards lado a lado */
+        flex-direction: row; 
+
+        /* Altura ajustável com base no conteúdo */
+        height: auto; 
+
+        /* Largura 100% do disponivel */
+        width: 100vw;
+
+        /* Retirando borda inserida anteriormente */
+        border-right: none;
+    }
+
+    .sidebar h1, .others h1 {
+        /* Largura 100% do disponivel */
+        width: 100%;
+
+        /* Centraliza o título horizontalmente */
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .sidebar_container, .others_container {
+        display: flex;
+        
+        /* Permite que os elementos quebrem para a próxima linha quando não couberem */
+        flex-wrap: wrap;
+
+        /* Elementos alinhados no centro */
+        justify-content: center;
+
+        /* Distancia entre elementos */
+        gap: 12px;
+
+        /* Largura 100% do disponivel */
+        width: 100%;
+
+        /* Altura automática com base no conteúdo */
+        height: auto;
+    }
+
+    .sidebar_category, .other {
+        /* Divide em duas colunas com espaço entre elas */
+        width: calc(30% - 10px);
+
+        /* Espaço entre os elementos */
+        margin-bottom: 15px;
+
+        /* Alinha o texto ao centro horizontalmente */
+        text-align: center; 
+
+        /* Adicione preenchimento interno para criar uma aparência de cartão */
+        padding: 10px; 
+
+        /* Adicione borda para criar uma aparência de cartão */
+        border: 2px solid #A7BFDE; 
+
+        /* Arredonda as bordas */
+        border-radius: 10px;
+    }
+
+    .sidebar_category p, .other p {
+        /* Espaçamento superior e inferior para o parágrafo */
+        margin: 5px 0; 
+    }
+    
+    /* Adicione espaço entre os elementos empilhados verticalmente */
+    .post, .other {
+        /* Espaço entre os elementos empilhados verticalmente */
+        margin-bottom: 20px; 
+        
+
+    /* Alinha o texto ao centro horizontalmente */
+        text-align: center; 
+    }
+}
+
+@media (max-width: 640px) {
+    /* Altera a direção dos elementos para empilhá-los verticalmente */
+    .sidebar_container, .others_container {
+        flex-direction: column;
+    }
+ 
+
+    .other, .sidebar_category, .sidebar {
+        /* Largura 100% do disponivel */
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove a borda */
+        border: none;
+        
+        /* Espaçamento interno */
+        padding: 5px 10px;
+        
+        /* Espaçamento superior */
+        padding-top: 5px; 
+
+        /* Remove a borda direita */
+        border-right: none; 
+
+        /* Tirando margem embaixo */
+        margin-bottom: 0px;
+    }
+
+    /* Estilos para a seção de posts em telas menores */
+    .posts {
+        /* Largura 100% do disponivel*/
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove a borda direita */
+        border-right: none;
+        
+        /* Borda superior */
+        border-top: 2px #A7BFDE solid;
+        
+        /* Borda inferior */
+        border-bottom: 2px #A7BFDE solid; 
+    }
+}

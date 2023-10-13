@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!-- Fontes de letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <title>FacilitaSUS</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/sus.svg">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./styles/login.css" />
+
+    
+</head>
+<body>
+    <section>
+        <div class="imgBg">
+            <img src="./assets/images/doctor.svg" alt="">
+        </div>
+
+        <div class="content">
+            <div class="image">
+                <img src="./assets/icons/sus.svg" alt="" />
+            </div>
+            <div class="form">
+                <h2> Login </h2>
+                <form action="" id="loginForm"> 
+                    <div class="input">
+                        <span>Email</span>
+                        <input type="text" placeholder="Insira o seu Email" required />
+                    </div>
+
+                    <div class="input">
+                        <span>Senha</span>
+                        <input type="password" placeholder="Insira a sua senha" required />
+                    </div>
+
+                    <div class="remember">
+                        <label><input type="checkbox" /> Se lembrar do login</label>
+                    </div>
+                    <div class="input">
+                        <input type="submit" value="Entrar" form="loginForm" />
+                    </div>
+
+                    <div class="input">
+                        <p> Esqueceu a senha? <a href="#"> Clique aqui</a></p>
+                    </div>
+                    <div class="input">
+                        <p> Não tem conta? <a href="./SignInPage.html"> Clique aqui</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="./scripts/login.js"></script>
+</body>
+</html>

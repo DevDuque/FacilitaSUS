@@ -1,0 +1,265 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 500;
+}
+
+section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+section .imgBg {
+    position: relative;
+
+    width: 60%;
+    height: 100%;
+}
+
+section .imgBg img {
+
+    position: absolute;
+
+    padding: 15px;
+
+    width: 100%;
+    height: 100%;
+}
+
+section .content {
+    display: flex; 
+
+    width: 40%;
+    height: 100%;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+section .content .image img {
+    width: 150px;
+    height: auto;
+
+    margin: 20px 0;
+}
+
+section .content .form {
+    width: 60%;
+}
+
+section .content .form h2 {
+    color: #2864AE;
+
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+    border-bottom: 4px solid #A7BFDE;
+
+    display: inline-block;
+
+    letter-spacing: 1px;
+}
+
+section .content .form .input {
+    margin-bottom: 20px;
+}
+
+section .content .form .input span {
+   margin-bottom: 15px;
+   display: inline-block;
+
+   font-size: 24px;
+
+
+   color: #2864AE;
+   letter-spacing: 2px;
+   font-weight: 800;
+
+}
+
+section .content .form .input input {
+    width: 100%;
+    padding: 15px 3%;
+    outline: none;
+
+    border: 2px solid #A7BFDE;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #2864AE;
+    background: transparent;
+    border-radius: 30px;
+
+    font-weight: 800;
+}
+
+section .content .form .input input[type = "submit"] {
+    width: 100%;
+    padding: 15px 3%;
+
+    font-size: 28px;
+
+    background: #2864AE; 
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 800;
+}
+
+section .content .form .input input[type = "submit"]:hover {
+
+    background-color: #387dd1;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+section .content .form .remember  {
+    margin-bottom: 15px;
+    color: #2864AE;
+
+}
+
+section .content .form .remember label {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+section .content .form .input p a{
+    color: #2864AE;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+section .content .form .input p {
+    color: #4F5154;
+}
+
+/* Styles for screens between 769px and 1024px */
+@media (max-width: 1024px) {
+    section .imgBg {
+        width: 100%;
+
+        position: fixed; /* Make it a background */
+        z-index: -1; /* Move it behind the form */
+    }
+
+    section .content .form h2 {
+        color: #FFF;
+    }
+
+
+    section .content .form .input span {
+        color: #fff;
+    }
+
+    section .content {
+        width: 100%;
+        height: 100vh;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+        font-weight: 800;
+    }
+
+    section .content .form .input p a{
+        color: #A7BFDE;
+        font-size: 20px;    
+
+    }
+
+    section .content .form .input p {
+        white-space: nowrap;
+        font-size: 20px;    
+        color: #fff;
+    }
+
+
+    section .content .form .remember  {
+        margin-bottom: 15px;
+        color: #FFF;
+    }
+
+    section .content .form .remember input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+
+        margin-right: 5px;
+        margin-bottom: 20px;
+    }
+
+    section .content .form .input input {
+        width: 100%;
+        padding: 15px 3%;
+        border: 3px solid #2864AE;
+        font-weight: 800;
+        font-size: 24px;
+        letter-spacing: 1px;
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 525px) {
+
+    section .content .form .input p {
+        white-space: normal;  
+    }
+    section .content .form .input p a {
+        display: block;
+        color: #A7BFDE;
+    }
+
+    section .content {
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    section .content .form h2 {
+        color: #A7BFDE;
+
+        border-bottom: 4px solid #2864AE;
+    }
+
+
+    section .content .form .input span {
+        color: #fff;
+        font-size: 18px; 
+    }
+
+    section .content .form .input input {
+        border: 2px solid #A7BFDE; 
+        background-color:#fff;
+        color: #2864AE;
+        padding: 10px 2%;
+        font-size: 14px;
+    }
+
+    section .content .form .input input[type="submit"] {
+        background: #2864AE;
+        color: #fff;
+        border: none;
+        border-radius: 20px; /* Slightly rounded corners for the button */
+        cursor: pointer;
+        padding: 10px 2%; /* Smaller padding */
+        font-size: 16px; /* Slightly larger font size */
+    }
+
+    section .content .form .remember label {
+        font-size: 14px;
+    }
+}

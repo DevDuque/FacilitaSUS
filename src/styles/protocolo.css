@@ -1,0 +1,266 @@
+.sidebar {
+    padding: 10px 15px;
+
+    /* Largura com 40% do disponivel */
+    width: 40%;
+
+    /* Altura com 100% do disponivel */
+    height: 100vh;
+
+    overflow-y: auto;
+}
+
+.sidebar_category {
+    margin: 20px 0;
+}
+
+.sidebar_category p, .other p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.post {
+    /* Define a largura do container de protocolos */
+    width:100%; 
+    height: 100vh;
+
+    padding: 10px 15px;    
+
+    display: flex;
+    flex-direction: column;
+
+    border-left: 2px solid #A7BFDE;
+
+    color: #5B5C60;
+    text-align: left;
+
+    overflow-y: auto;
+}
+
+.post ul {
+    /* Dando espaço para os itens da lista */
+    padding: 20px 35px;
+}
+
+.post p {
+    margin-top: 15px;
+}
+
+.footer {
+
+    display: flex;
+
+    /* Distribui o espaço disponível entre os elementos */
+
+    justify-content: space-between; 
+    
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+    border-top: 2px solid #A7BFDE;
+}
+
+/* Estilo para os botões "Próximo" e "Anterior" */
+.previous-button,
+.next-button {
+    padding: 15px 30px;
+
+    background-color: #2864AE;
+
+    color: #fff;
+
+    border: none;
+
+    cursor: pointer;
+
+    /* Espaçamento horizontal entre os botões */
+    margin: 0 10px; 
+
+    border-radius: 15px;
+
+    font-size: 15px;    
+    font-family: 'Bai Jamjuree';
+}
+
+/* Estilo quando o mouse passa por cima dos botões */
+.previous-button:hover,
+.next-button:hover {
+    background-color: #5B5C60;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+.others {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    
+    .other p, a{
+        color: #2864AE;
+        text-decoration: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .post {
+        /* Largura 100% do disponivel*/
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove a borda direita */
+        border: none;
+    }
+
+    .sidebar,
+    .others {
+        display: flex;
+        /* Exibe os cards lado a lado */
+        flex-direction: row; 
+
+        /* Altura ajustável com base no conteúdo */
+        height: auto; 
+
+        /* Largura 100% do disponivel */
+        width: 100vw;
+
+        /* Retirando borda inserida anteriormente */
+        border-right: none;
+    }
+
+    .sidebar h1, .others h1 {
+        /* Largura 100% do disponivel */
+        width: 100%;
+
+        /* Centraliza o título horizontalmente */
+        text-align: center;
+
+        font-size: 24px;
+        font-weight: 700;
+        font-style: italic;
+    
+        color: #4F5154;
+    }
+
+    .sidebar_container, .others_container {
+        display: flex;
+        
+        /* Permite que os elementos quebrem para a próxima linha quando não couberem */
+        flex-wrap: wrap;
+
+        /* Elementos alinhados no centro */
+        justify-content: center;
+
+        /* Distancia entre elementos */
+        gap: 12px;
+
+        /* Largura 100% do disponivel */
+        width: 100%;
+
+        /* Altura automática com base no conteúdo */
+        height: auto;
+    }
+
+    .sidebar_category, .other {
+        /* Divide em duas colunas com espaço entre elas */
+        width: calc(30% - 10px);
+
+        /* Espaço entre os elementos */
+        margin-bottom: 15px;
+
+        /* Alinha o texto ao centro horizontalmente */
+        text-align: center; 
+
+        /* Adicione preenchimento interno para criar uma aparência de cartão */
+        padding: 10px; 
+
+        /* Adicione borda para criar uma aparência de cartão */
+        border: 2px solid #A7BFDE; 
+
+        /* Arredonda as bordas */
+        border-radius: 10px;
+
+        text-decoration: none;
+    }
+    
+    /* Adicione espaço entre os elementos empilhados verticalmente */
+    .post {
+        /* Espaço entre os elementos empilhados verticalmente */
+        margin-bottom: 20px; 
+        
+
+    /* Alinha o texto ao centro horizontalmente */
+        text-align: left; 
+    }
+
+    /* Adicione espaço entre os elementos empilhados verticalmente */
+    .other {
+        /* Espaço entre os elementos empilhados verticalmente */
+        margin-bottom: 20px; 
+        
+
+    /* Alinha o texto ao centro horizontalmente */
+        text-align: center; 
+    }
+}
+
+@media (max-width: 640px) {
+    /* Altera a direção dos elementos para empilhá-los verticalmente */
+    .sidebar_container, .others_container {
+        flex-direction: column;
+    }
+ 
+
+    .other, .sidebar_category, .sidebar {
+        /* Largura 100% do disponivel */
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove a borda */
+        border: none;
+        
+        /* Espaçamento interno */
+        padding: 5px 10px;
+        
+        /* Espaçamento superior */
+        padding-top: 5px; 
+
+        /* Remove a borda direita */
+        border-right: none; 
+
+        /* Tirando margem embaixo */
+        margin-bottom: 0px;
+    }
+
+    /* Estilos para a seção de post em telas menores */
+    .post {
+        /* Largura 100% do disponivel*/
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove a borda direita */
+        border-right: none;
+        
+        /* Borda superior */
+        border-top: 2px #A7BFDE solid;
+        
+        /* Borda inferior */
+        border-bottom: 2px #A7BFDE solid; 
+    }
+}
+
+@media(max-width: 475px) {
+    .previous-button,
+    .next-button {
+        font-size: 16px;
+ }
+}

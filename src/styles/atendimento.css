@@ -1,0 +1,322 @@
+.sidebar {
+    padding: 10px 15px;
+
+    /* Largura com 40% do disponivel */
+    width: 60%;
+
+    /* Altura com 100% do disponivel */
+    height: 100vh;
+}
+
+.sub-content {
+    padding: 15px;
+
+    display: flex;
+
+    justify-content: space-evenly;
+}
+
+.sub-content h2 {
+    display: inline;
+    margin-right: 10px;
+
+}
+
+.message {
+    border-bottom: 2px solid #A7BFDE;
+}
+
+.message p {
+    color:#5B5C60;
+    
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+
+    
+    padding-bottom: 15px;
+}
+
+.messageInput {
+    /* Define a largura do container de mensagem */
+    width: 100%; 
+    height: 100vh;
+
+    padding: 10px 15px;    
+
+    border-left: 2px solid #A7BFDE;
+
+    font-size: 22px;
+}
+
+
+/* Estilize o "flex-container" */
+.flex-container {
+    display: flex;
+    /* Espaço entre "titleType" e "dropInput" */
+    justify-content: space-between; 
+
+    align-items: center;
+    margin: 20px;
+
+}
+
+/* Estilize o "titleType" */
+.titleType {
+    width: 60%;
+    padding: 15px 3%;
+    outline: none;
+
+    border: 2px solid #A7BFDE;
+
+    color: #2864AE;
+    
+    border-radius: 20px;
+
+    font-weight: 800;
+
+    margin-right: 45px; 
+}
+
+.titleType input[type="text"]{
+    width: 100%;
+
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 800;
+
+    text-align: center;
+    background: transparent;
+    
+    color: #2864AE;
+}
+
+.dropInput #altInput {
+    width: 100%;
+
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 800;
+
+    text-align: center;
+    background: transparent;
+    padding: 0 5px;
+
+    
+    color: #2864AE;
+}
+
+/* Estilize o "dropInput" */
+.dropInput {
+    width: 40%;
+
+    padding: 15px 3%;
+    outline: none;
+
+    border: 2px solid #A7BFDE;
+    font-size: 22px;
+    letter-spacing: 1px;
+
+    color: #2864AE;
+    background: transparent;
+
+    border-radius: 20px;
+
+    font-weight: 800;
+}
+
+.conteudoMessage {
+
+    height: 300px;
+
+    box-sizing: border-box;
+
+    margin: 20px;
+
+}
+
+.conteudoMessage textarea{
+    width: 100%;
+    height: 100%;
+    padding: 15px 3%;
+    outline: none;
+
+    border: 2px solid #A7BFDE;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #2864AE;
+    background: transparent;
+    border-radius: 20px;
+
+    font-weight: 800;
+
+    resize: none;
+}
+
+.submit {
+    width: 60%;
+
+    cursor: pointer;
+
+    background: #2864AE; 
+
+    margin-left: auto;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+.submit input[type="submit"]{
+    width: 100%;
+    height: 100%;
+
+    padding: 15px 3%;
+
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    
+    color: #fff;
+    background: transparent; 
+
+    border-radius: 30px;
+}
+
+.submit input:hover {
+    background-color: #387dd1;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: flex;
+        /* Exibe os cards lado a lado */
+        flex-direction: row; 
+
+        /* Altura ajustável com base no conteúdo */
+        height: auto; 
+
+        /* Largura 100% do disponivel */
+        width: 100vw;
+
+        /* Retirando borda inserida anteriormente */
+        border-right: none;
+    }
+
+    .sidebar h1 {
+        /* Largura 100% do disponivel */
+        width: 100%;
+
+        /* Centraliza o título horizontalmente */
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .sidebar {
+        display: flex;
+        
+        /* Permite que os elementos quebrem para a próxima linha quando não couberem */
+        flex-wrap: wrap;
+
+        /* Elementos alinhados no centro */
+        justify-content: center;
+
+        /* Distancia entre elementos */
+        gap: 12px;
+
+        /* Largura 100% do disponivel */
+        width: 100%;
+
+        /* Altura automática com base no conteúdo */
+        height: auto;
+    }
+
+    .message {
+        /* Divide em duas colunas com espaço entre elas */
+        width: calc(30% - 10px);
+
+        /* Espaço entre os elementos */
+        margin-bottom: 15px;
+
+        /* Alinha o texto ao centro horizontalmente */
+        text-align: center; 
+
+        /* Adicione preenchimento interno para criar uma aparência de cartão */
+        padding: 10px; 
+
+        /* Adicione borda para criar uma aparência de cartão */
+        border: 2px solid #A7BFDE; 
+
+        /* Arredonda as bordas */
+        border-radius: 10px;
+    }
+
+    .sub-content {
+        /* Espaçamento superior e inferior para o parágrafo */
+        margin: 5px 0; 
+    }
+
+    .messageInput {
+        /* Largura 100% do disponivel*/
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove as bordas */
+        border: none;
+
+        /* Espaço entre os elementos empilhados verticalmente */
+        margin-bottom: 20px; 
+        
+
+    /* Alinha o texto ao centro horizontalmente */
+        text-align: center; 
+    }
+}
+
+@media (max-width: 640px) {
+
+    /* Altera a direção dos elementos para empilhá-los verticalmente */
+    .sidebar {
+        flex-direction: column;
+    }
+ 
+     .message, .sidebar {
+        /* Largura 100% do disponivel */
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove a borda */
+        border: none;
+        
+        /* Espaçamento interno */
+        padding: 5px 10px;
+        
+        /* Espaçamento superior */
+        padding-top: 5px; 
+
+        /* Remove a borda direita */
+        border-right: none; 
+
+        /* Tirando margem embaixo */
+        margin-bottom: 0px;
+    }
+
+    /* Estilos para a seção de posts em telas menores */
+    .main {
+        /* Largura 100% do disponivel*/
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove a borda direita */
+        border-right: none;
+        
+        /* Borda superior */
+        border-top: 2px #A7BFDE solid;
+    }
+}

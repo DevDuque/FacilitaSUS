@@ -1,0 +1,316 @@
+.sidebar {
+    padding: 10px 15px;
+
+    /* Largura com 40% do disponivel */
+    width: 40%;
+
+    /* Altura com 100% do disponivel */
+    height: 100vh;
+}
+
+.posts {
+    /* Define a largura do container de protocolos */
+    width:100%; 
+    height: 100vh;
+
+    padding: 10px 15px;    
+
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #A7BFDE;
+}
+
+@media (max-width: 768px) {
+    .posts {
+        /* Largura 100% do disponivel*/
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove as bordas */
+        border: none;
+    }
+    
+<<<<<<< HEAD
+        /* Voltando a deixar os elementos um abaixo do outro */
+=======
+    .header {
+        /* Redefinindo o espaçamento em telas menores */
+        padding: 10px 20px;
+        width: 100vw;
+
+    }
+
+    /* Fazendo a imagem GOV sumir */
+    .header_left img {
+        display: none;
+    }
+
+    .header_right img {
+        padding-left: 20px;
+    }
+
+    .header_icons img {
+        /* Diminuindo os icones */
+        width: 65px; 
+        height: 65px;
+    }
+
+        /* Voltando a deixar os elementos um abaixo do outro */
+    .main {
+        flex-direction: column; 
+        border: none;
+    }
+    
+    .main h1 {
+        font-weight: 700;
+        font-size: 25px;
+        font-style: italic;
+        text-align: center;
+    
+        color: #4F5154;
+    }
+
+    .main h2 {
+    
+        font-weight: 600;
+        font-size: 18px;
+        font-style: italic;
+        text-align: left;
+    
+        color: #2864AE;
+    }
+
+    .main a {
+        color: #5B5C60;
+        text-decoration: none;
+    
+        font-size: 16px;
+        text-align: center;
+    }
+>>>>>>> 333fa37c54c1e530395ae696e513cf6c5e554164
+
+    .sidebar
+ {
+        display: flex;
+        /* Exibe os cards lado a lado */
+        flex-direction: row; 
+
+        /* Altura ajustável com base no conteúdo */
+        height: auto; 
+
+        /* Largura 100% do disponivel */
+        width: 100vw;
+
+        /* Retirando borda inserida anteriormente */
+        border-right: none;
+    }
+
+    .sidebar h1 {
+        /* Largura 100% do disponivel */
+        width: 100%;
+
+        /* Centraliza o título horizontalmente */
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .sidebar_container {
+        display: flex;
+        
+        /* Permite que os elementos quebrem para a próxima linha quando não couberem */
+        flex-wrap: wrap;
+
+        /* Elementos alinhados no centro */
+        justify-content: center;
+
+        /* Distancia entre elementos */
+        gap: 12px;
+
+        /* Largura 100% do disponivel */
+        width: 100%;
+
+        /* Altura automática com base no conteúdo */
+        height: auto;
+    }
+
+    .sidebar_category {
+        /* Divide em duas colunas com espaço entre elas */
+        width: calc(30% - 10px);
+
+        /* Espaço entre os elementos */
+        margin-bottom: 15px;
+
+        /* Alinha o texto ao centro horizontalmente */
+        text-align: center; 
+
+        /* Adicione preenchimento interno para criar uma aparência de cartão */
+        padding: 10px; 
+
+        /* Adicione borda para criar uma aparência de cartão */
+        border: 2px solid #A7BFDE; 
+
+        /* Arredonda as bordas */
+        border-radius: 10px;
+    }
+
+    .sidebar_category p {
+        /* Espaçamento superior e inferior para o parágrafo */
+        margin: 5px 0; 
+    }
+    
+    /* Adicione espaço entre os elementos empilhados verticalmente */
+    .post {
+        /* Espaço entre os elementos empilhados verticalmente */
+        margin-bottom: 20px; 
+        
+
+    /* Alinha o texto ao centro horizontalmente */
+        text-align: center; 
+    }
+
+    
+    #notificationDiv {
+        /* Exibe a div */
+        display: block; 
+
+        /* Fixa a posição */
+        position: fixed; 
+        top: 100px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        padding: 15px 0;
+        border-left: 0;
+
+        /* Ocupa toda a largura disponível */
+        width: 100%; 
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+    }
+
+    .notification-open {
+        overflow: hidden;
+      }
+
+}
+
+@media (max-width: 640px) {
+<<<<<<< HEAD
+=======
+    .header {
+        /* Redefine o espaçamento em telas menores */
+        padding: 15px;
+
+        /* Largura 100% do disponivel */
+        width: 100vw; 
+    }
+
+    .header_right img {
+        /* Reduz o tamanho dos ícones */
+        width: 60px; 
+        height: 60px;
+
+        /* Espaçamento à esquerda do ícone */
+        padding-left: 20px; 
+    }
+
+    .header_icons img {
+        /* Reduz o tamanho do logotipo em telas menores */
+        width: 55px; 
+        height: 55px;
+    }
+
+    .header_icons {
+        /* Espaço entre os ícones */
+        gap: 35px; 
+    }
+>>>>>>> 333fa37c54c1e530395ae696e513cf6c5e554164
+
+    /* Altera a direção dos elementos para empilhá-los verticalmente */
+    .sidebar_container {
+        flex-direction: column;
+    }
+ 
+
+    .sidebar_category, .sidebar {
+        /* Largura 100% do disponivel */
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove a borda */
+        border: none;
+        
+        /* Espaçamento interno */
+        padding: 5px 10px;
+        
+        /* Espaçamento superior */
+        padding-top: 5px; 
+
+        /* Remove a borda direita */
+        border-right: none; 
+
+        /* Tirando margem embaixo */
+        margin-bottom: 0px;
+    }
+
+    /* Estilos para a seção de posts em telas menores */
+    .posts {
+        /* Largura 100% do disponivel*/
+        width: 100vw; 
+
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+
+        /* Remove a borda direita */
+        border-right: none;
+        
+        /* Borda superior */
+        border-top: 2px #A7BFDE solid;
+        
+        /* Borda inferior */
+        border-bottom: 2px #A7BFDE solid; 
+    }
+<<<<<<< HEAD
+=======
+}
+
+@media(max-width: 475px) {
+    .main h1 {
+        font-weight: 700;
+        font-size: 22px;
+        font-style: italic;
+    
+        color: #4F5154;
+    }
+
+    .main h2 {
+        padding-top: 10px;
+    
+        font-weight: 600;
+        font-size: 18px;
+        font-style: italic;
+        text-align: left;
+    
+        color: #2864AE;
+    }
+
+    .main a {
+        color: #5B5C60;
+        text-decoration: none;
+    
+        font-size: 16px;
+        text-align: center;
+    }
+
+        .header_icons img {
+            /* Diminuindo os icones */
+            width: 40px; 
+            height: 40px;
+        }
+>>>>>>> 333fa37c54c1e530395ae696e513cf6c5e554164
+}

@@ -1,0 +1,411 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
+
+/* Resetando os estilos padroes do CSS */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+    font-weight: 500;
+
+    box-sizing: border-box;
+
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+/* Estilos para a div HEADER */
+.header {
+    
+    /* Torna conteiner flexivel  */
+    display: flex;
+
+    /* Alinha centralizando verticalmente */
+    align-items: center;
+
+    /* Coloca espaco entre os elementos filhos */
+    justify-content: space-between;
+
+    /* Adiciona espaco em branco 10px no topo e embaixo e 25px aos lados  */
+    padding: 10px 25px;
+
+    /* Adiciona uma linha na parte inferior */
+    border-bottom: 2px solid #A7BFDE; 
+}
+
+/* Estilos para a div HEADER_ICONS */
+.header_icons {
+    /* Torna conteiner flexivel  */
+    display: flex;
+
+    /* Organiza os elementos na horizontal */
+    flex-direction: row;
+
+    /* Alinha centralizando verticalmente */
+    align-items: center;
+
+    /* Espaco de 40px entre eles */
+    gap: 65px;
+
+    /* Centraliza horizontalmente a div no header */
+    margin: 0 auto;
+}
+
+
+/* Estilos para as imagens do HEADER_ICONS */
+.header_icons img {
+    /* Define largura e altura para as imagens */
+    width: 60px;
+    height: 55px;
+
+    /* Define como elementos de bloco para ser flexivel */
+    display: flex;
+
+    /* Centraliza horizontalmente */
+    margin: 0 auto;
+}
+
+/* Estilos para o texto da página ativa */
+.header_icons #active p  {
+    color: #5B5C60;
+    font-weight: 700;
+
+    text-decoration: underline;
+
+    text-decoration-color: #5B5C60;
+}
+
+/* Estilos para cada ícone no HEADER_ICONS e palavras abaixo*/
+.header_icons a {
+    /* Alinha horizontalmente */
+    text-align: center;
+
+    /* Define a grossura da fonte */
+    font-weight: 500;
+
+    /* Adicionando espaço acima do elemento */
+    padding-top: 10px;
+    
+    /* Define a cor e tamanho da fonte */
+    color: #2864AE;
+    font-size: 18px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    /* Alinha os elementos no topo */
+    align-items: flex-start;
+}
+
+.main h1 {
+    font-weight: 700;
+    font-size: 20px;
+    font-style: italic;
+
+    color: #4F5154;
+}
+
+.main h2 {
+    padding-top: 20px;
+
+    font-weight: 600;
+    font-size: 18px;
+    font-style: italic;
+    text-align: left;
+
+    color: #2864AE;
+}
+
+.main a {
+    color: #5B5C60;
+    text-decoration: none;
+
+    font-size: 16px;
+    text-align: center;
+}
+
+/* A partir daqui são estilos da div de notificação */
+#notificationDiv {
+    position: absolute;
+    right: 0;
+    top: 146px;
+    background-color: #FFF; /* Cor de fundo da div */
+    padding: 15px 0;
+    width: 30%; /* Largura da div */
+    height: 100%;
+
+    border-left: 2px solid #A7BFDE;
+
+    overflow-y: auto;
+    
+  }
+  
+  .content h1 {
+    color:#5B5C60;
+    font-size: 20px;
+
+    font-weight: 800;
+    font-style: italic;
+
+    padding-left: 20px;
+  }
+
+  .message p {
+    color:#5B5C60;
+    
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+
+    padding: 15px;
+  }
+
+ .message {
+    height: auto;
+
+    border-bottom: 2px solid #A7BFDE;
+  }
+  
+  .sub-content {
+    display: flex;
+    /* Coloca os h2 lado a lado */
+    justify-content: space-evenly; 
+
+    color:#2864AE;
+  }
+
+  .sub-content h2 {
+    font-size: 18px;
+    font-weight:  700;
+    padding: 12px;
+  }
+
+ /* Responsividade */
+
+ @media (max-width: 1024px) {
+    .header_icons p {
+        display: none;
+    }
+
+    .header_left img {
+        width: 180px;
+        height: 120px;
+    }
+
+    .header_icons img {
+        /* Reduz o tamanho do logotipo em telas menores */
+        width: 55px; 
+        height: 55px;
+    }
+
+    .header_right img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .main h1 {
+        font-weight: 700;
+        font-size: 18px;
+        font-style: italic;
+    
+        color: #4F5154;
+    }
+
+    .main h2 {
+        padding-top: 10px;
+    
+        font-weight: 600;
+        font-size: 16px;
+        font-style: italic;
+        text-align: left;
+    
+        color: #2864AE;
+    }
+
+    .main a {
+        color: #5B5C60;
+        text-decoration: none;
+    
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .message p {
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .header {
+        /* Redefine o espaçamento em telas menores */
+        padding: 25px 25px; 
+    }
+    
+    /* Aumentando distancia dos icones visto que GOV vai ficar menor */
+    .header_icons {
+        gap: 45px;
+    }
+
+
+    /* Diminuindo a imagem GOV */
+    .header_left img {
+        width: 175px;
+        height: 100px;
+    }
+    
+    /* Diminuindo a imagem SUS */
+    .header_right img {
+        width: 100px;
+        height: 100px;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        /* Redefinindo o espaçamento em telas menores */
+        padding: 10px 20px;
+        width: 100vw;
+
+    }
+
+    /* Fazendo a imagem GOV sumir */
+    .header_left img {
+        display: none;
+    }
+
+    .header_right img {
+        padding-left: 20px;
+    }
+
+    .header_icons img {
+        /* Diminuindo os icones */
+        width: 65px; 
+        height: 65px;
+    }
+
+    /* Voltando a deixar os elementos um abaixo do outro */
+    .main {
+        flex-direction: column; 
+        border: none;
+    }
+    
+    .main h1 {
+        font-weight: 700;
+        font-size: 25px;
+        font-style: italic;
+        text-align: center;
+    
+        color: #4F5154;
+    }
+
+    .main h2 {
+    
+        font-weight: 600;
+        font-size: 18px;
+        font-style: italic;
+        text-align: left;
+    
+        color: #2864AE;
+    }
+
+    .main a {
+        color: #5B5C60;
+        text-decoration: none;
+    
+        font-size: 16px;
+        text-align: center;
+    }
+
+    
+    #notificationDiv {
+        /* Exibe a div */
+        display: block; 
+
+        /* Fixa a posição */
+        position: fixed; 
+        top: 100px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        padding: 15px 0;
+        border-left: 0;
+
+        /* Ocupa toda a largura disponível */
+        width: 100%; 
+        /* Altura automática com base no conteúdo */
+        height: auto; 
+    }
+
+    .notification-open {
+        overflow: hidden;
+      }
+}
+
+@media (max-width: 640px) {
+    .header {
+        /* Redefine o espaçamento em telas menores */
+        padding: 15px;
+
+        /* Largura 100% do disponivel */
+        width: 100vw; 
+    }
+
+    .header_right img {
+        /* Reduz o tamanho dos ícones */
+        width: 60px; 
+        height: 60px;
+
+        /* Espaçamento à esquerda do ícone */
+        padding-left: 20px; 
+    }
+
+    .header_icons img {
+        /* Reduz o tamanho do logotipo em telas menores */
+        width: 55px; 
+        height: 55px;
+    }
+
+    .header_icons {
+        /* Espaço entre os ícones */
+        gap: 35px; 
+    }
+}
+
+@media(max-width: 475px) {
+    .main h1 {
+        font-weight: 700;
+        font-size: 22px;
+        font-style: italic;
+    
+        color: #4F5154;
+    }
+
+    .main h2 {
+        padding-top: 10px;
+    
+        font-weight: 600;
+        font-size: 18px;
+        font-style: italic;
+        text-align: left;
+    
+        color: #2864AE;
+    }
+
+    .main a {
+        color: #5B5C60;
+        text-decoration: none;
+    
+        font-size: 16px;
+        text-align: center;
+    }
+
+        .header_icons img {
+            /* Diminuindo os icones */
+            width: 40px; 
+            height: 40px;
+        }
+}
