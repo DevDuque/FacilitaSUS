@@ -25,7 +25,7 @@ function isValidEmail(email) {
     alert("Encaminhando para a próxima página...");
   
     // Redirecionar para outra página (substitua 'next-page.html' pela URL desejada)
-    window.location.href = './home.html';
+    window.location.href = './Home.html';
   }
   
   // Adicionar um ouvinte de evento ao formulário
