@@ -24,7 +24,7 @@
     align-items: center;
 
     /* Coloca espaco entre os elementos filhos */
-    justify-content: space-between;
+    justify-content: flex-end;
 
     /* Adiciona espaco em branco 10px no topo e embaixo e 25px aos lados  */
     padding: 10px 25px;
@@ -48,9 +48,8 @@
     gap: 65px;
 
     /* Centraliza horizontalmente a div no header */
-    margin: 0 auto;
+    margin: 0 20px;
 }
-
 
 /* Estilos para as imagens do HEADER_ICONS */
 .header_icons img {
