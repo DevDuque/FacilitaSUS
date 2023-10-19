@@ -44,8 +44,8 @@
     /* Alinha centralizando verticalmente */
     align-items: center;
 
-    /* Espaco de 40px entre eles */
-    gap: 65px;
+    /* Espaco de 30px entre eles */
+    gap: 30px;
 
     /* Centraliza horizontalmente a div no header */
     margin: 0 20px;
@@ -54,14 +54,19 @@
 /* Estilos para as imagens do HEADER_ICONS */
 .header_icons img {
     /* Define largura e altura para as imagens */
-    width: 60px;
-    height: 55px;
+    width: 30px;
+    height: 35px;
 
     /* Define como elementos de bloco para ser flexivel */
     display: flex;
 
     /* Centraliza horizontalmente */
     margin: 0 auto;
+}
+
+.header_right img {
+    width: 50px;
+    height: 50px;
 }
 
 /* Estilos para o texto da página ativa */
@@ -87,7 +92,7 @@
     
     /* Define a cor e tamanho da fonte */
     color: #2864AE;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .main {
@@ -187,11 +192,6 @@
         display: none;
     }
 
-    .header_left img {
-        width: 180px;
-        height: 120px;
-    }
-
     .header_icons img {
         /* Reduz o tamanho do logotipo em telas menores */
         width: 55px; 
@@ -199,8 +199,8 @@
     }
 
     .header_right img {
-        width: 120px;
-        height: 120px;
+        width: 50px;
+        height: 50px;
     }
 
     .main h1 {
@@ -246,13 +246,6 @@
     .header_icons {
         gap: 45px;
     }
-
-
-    /* Diminuindo a imagem GOV */
-    .header_left img {
-        width: 175px;
-        height: 100px;
-    }
     
     /* Diminuindo a imagem SUS */
     .header_right img {
@@ -268,11 +261,6 @@
         padding: 10px 20px;
         width: 100vw;
 
-    }
-
-    /* Fazendo a imagem GOV sumir */
-    .header_left img {
-        display: none;
     }
 
     .header_right img {
