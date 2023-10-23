@@ -97,9 +97,6 @@
 
 .main {
     display: flex;
-    justify-content: space-between;
-    /* Alinha os elementos no topo */
-    align-items: flex-start;
 }
 
 .main h1 {
@@ -133,13 +130,14 @@
 #notificationDiv {
     position: absolute;
     right: 0;
-    top: 146px;
+    top: 80px;
     background-color: #FFF; /* Cor de fundo da div */
     padding: 15px 0;
     width: 30%; /* Largura da div */
     height: 100%;
 
     border-left: 2px solid #A7BFDE;
+    border-top: 2px solid #A7BFDE;
 
     overflow-y: auto;
     
