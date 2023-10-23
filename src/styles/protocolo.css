@@ -20,6 +20,11 @@
     font-size: 16px;
 }
 
+.post img {
+    width: 100%;
+    height: 80vh;
+}
+
 .post {
     /* Define a largura do container de protocolos */
     width:100%; 
