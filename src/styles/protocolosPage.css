@@ -32,9 +32,6 @@
         border: none;
     }
     
-<<<<<<< HEAD
-        /* Voltando a deixar os elementos um abaixo do outro */
-=======
     .header {
         /* Redefinindo o espaçamento em telas menores */
         padding: 10px 20px;
@@ -89,7 +86,6 @@
         font-size: 16px;
         text-align: center;
     }
->>>>>>> 333fa37c54c1e530395ae696e513cf6c5e554164
 
     .sidebar
  {
@@ -198,8 +194,6 @@
 }
 
 @media (max-width: 640px) {
-<<<<<<< HEAD
-=======
     .header {
         /* Redefine o espaçamento em telas menores */
         padding: 15px;
@@ -227,7 +221,6 @@
         /* Espaço entre os ícones */
         gap: 35px; 
     }
->>>>>>> 333fa37c54c1e530395ae696e513cf6c5e554164
 
     /* Altera a direção dos elementos para empilhá-los verticalmente */
     .sidebar_container {
@@ -275,8 +268,6 @@
         /* Borda inferior */
         border-bottom: 2px #A7BFDE solid; 
     }
-<<<<<<< HEAD
-=======
 }
 
 @media(max-width: 475px) {
@@ -312,5 +303,4 @@
             width: 40px; 
             height: 40px;
         }
->>>>>>> 333fa37c54c1e530395ae696e513cf6c5e554164
 }
