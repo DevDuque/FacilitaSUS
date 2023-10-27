@@ -22,12 +22,15 @@
 </head>
 <body>
     <div class="header">  
+        <!-- Icone no topo direito -->
+        <div class="header_right">
+            
+        </div>
         <!-- Icones no topo -->
         <div class="header_icons">
             <!-- HomeIcon -->
             <a href="./Home.html">
-                <img src="./assets/icons/home.svg" alt="HomeLogo" />
-                <p> Início </p>
+                <img src="./assets/icons/sus.svg" alt="SUSLogo"/>
             </a>
             
             <!-- ProtocoloIcon -->
@@ -42,39 +45,16 @@
                 <p> Atendimento </p>
             </a>
     
-            <!-- NotificacaoIcon-->
+            <!-- ProfileIcon-->
             <a href="#" id="linkNotification">
                 <img id="imageChange" src="./assets/icons/bell.svg" alt="NotificacaoLogo"/>
                 <p id="textChange"> Notificações </p>
             </a>
         </div>
-    
-        <!-- Icone no topo direito -->
-        <div class="header_right">
-            <a href="#">
-                <img src="./assets/icons/sus.svg" alt="SUSLogo"/>
-            </a>
-        </div>
     </div>
 
 
-    <div class="main">
-        <div class="sidebar">
-            <!-- Sidebar -->
-            <div class="sidebar_container">
-            <h1>Artigos</h1>
-                <!-- Elementos da Sidebar -->
-                <div class="sidebar_category">
-                    <a href="#">
-                        <h2> Aqui tem um artigo </h2>
-                    <p>
-                        Resumo legal sobre o artigo
-                    </p>
-                </a>
-                </div>
-            </div>
-        </div>
-    
+    <div class="main"> 
         <div class="posts">
             <h1> Protocolos </h1>
             <!-- Posts -->
@@ -102,31 +82,9 @@
                 </div>
             </div>
         </div>
-
-        <div id ="notificationDiv" style="display: none;">
-            <div class="message">
-                <div class="content">
-                    <h1> Notificações </h1>
-                </div>
-                <a href="">
-                <div class="sub-content">
-                    <h2> Mensagem</h2>
-                    <h2> Tipo</h2>
-                </div>
-            <p> 
-                Conteúdo da mensagem... LALA
-                Conteúdo da mensagem... LALA
-                Conteúdo da mensagem... LALA
-                Conteúdo da mensagem... LALA
-            </p>
-                </a>
-            </div>
-        </div>
     </div>
 
     </div>
-
-    <script src="./scripts/Notification.js"></script>
      
 </body>
 </html>

@@ -24,7 +24,7 @@
     align-items: center;
 
     /* Coloca espaco entre os elementos filhos */
-    justify-content: space-between;
+    justify-content: flex-start;
 
     /* Adiciona espaco em branco 10px no topo e embaixo e 25px aos lados  */
     padding: 10px 25px;
@@ -125,62 +125,6 @@
     text-align: center;
 }
 
-/* A partir daqui são estilos da div de notificação */
-#notificationDiv {
-    position: absolute;
-    right: 0;
-    top: 146px;
-    background-color: #FFF; /* Cor de fundo da div */
-    padding: 15px 0;
-    width: 30%; /* Largura da div */
-    height: 100%;
-
-    border-left: 2px solid #A7BFDE;
-
-    overflow-y: auto;
-    
-  }
-  
-  .content h1 {
-    color:#5B5C60;
-    font-size: 20px;
-
-    font-weight: 800;
-    font-style: italic;
-
-    padding-left: 20px;
-  }
-
-  .message p {
-    color:#5B5C60;
-    
-    font-size: 16px;
-    font-style: italic;
-    text-align: center;
-
-    padding: 15px;
-  }
-
- .message {
-    height: auto;
-
-    border-bottom: 2px solid #A7BFDE;
-  }
-  
-  .sub-content {
-    display: flex;
-    /* Coloca os h2 lado a lado */
-    justify-content: space-evenly; 
-
-    color:#2864AE;
-  }
-
-  .sub-content h2 {
-    font-size: 18px;
-    font-weight:  700;
-    padding: 12px;
-  }
-
  /* Responsividade */
 
  @media (max-width: 1024px) {
@@ -199,7 +143,7 @@
         height: 55px;
     }
 
-    .header_right img {
+    .header_left img {
         width: 120px;
         height: 120px;
     }
