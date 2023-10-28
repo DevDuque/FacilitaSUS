@@ -50,7 +50,7 @@ section .content {
 
 section .content .image img {
     width: 150px;
-    height: auto;
+    height: 150px;
 
     margin: 20px 0;
 }
