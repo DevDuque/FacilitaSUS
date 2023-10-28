@@ -21,20 +21,19 @@
     
 </head>
 <body>
-    <div class="header">  
+    <div class="header">
+
         <!-- Icone no topo direito -->
-        <div class="header_right">
-            
-        </div>
-        <!-- Icones no topo -->
-        <div class="header_icons">
-            <!-- HomeIcon -->
+        <div class="header_left">
             <a href="./Home.html">
                 <img src="./assets/icons/sus.svg" alt="SUSLogo"/>
             </a>
-            
+        </div>
+    
+        <!-- Icones no topo -->
+        <div class="header_icons">
             <!-- ProtocoloIcon -->
-            <a href="#"  id="active">
+            <a href="./ProtocolosPage.html" id="active">
                 <img src="./assets/icons/linesActive.svg" alt="ProtocolosLogo"/>
                 <p> Protocolos </p>
             </a>
@@ -45,16 +44,21 @@
                 <p> Atendimento </p>
             </a>
     
-            <!-- ProfileIcon-->
-            <a href="#" id="linkNotification">
-                <img id="imageChange" src="./assets/icons/bell.svg" alt="NotificacaoLogo"/>
-                <p id="textChange"> Notificações </p>
+            <!-- PerfilIcon-->
+            <a href="./Perfil.html">
+                <img src="./assets/icons/user.svg" alt="NotificacaoLogo"/>
+                <p> Meu Perfil </p>
             </a>
+        </div>
+    
+        <!-- Icone no topo direito -->
+        <div class="header_right">
+                <h2> Olá, <b style="color: #2864AE;">${username}</b> </h2>
+                <p> Seja bem-vindo(a)</p>
         </div>
     </div>
 
-
-    <div class="main"> 
+    <div class="main">
         <div class="posts">
             <h1> Protocolos </h1>
             <!-- Posts -->

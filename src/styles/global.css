@@ -24,7 +24,7 @@
     align-items: center;
 
     /* Coloca espaco entre os elementos filhos */
-    justify-content: flex-start;
+    justify-content: flex-end;
 
     /* Adiciona espaco em branco 10px no topo e embaixo e 25px aos lados  */
     padding: 10px 25px;
@@ -44,18 +44,17 @@
     /* Alinha centralizando verticalmente */
     align-items: center;
 
-    /* Espaco de 40px entre eles */
-    gap: 65px;
+    /* Espaco de 30px entre eles */
+    gap: 30px;
 
     /* Centraliza horizontalmente a div no header */
     margin: 0 auto;
 }
 
-
 /* Estilos para as imagens do HEADER_ICONS */
 .header_icons img {
     /* Define largura e altura para as imagens */
-    width: 60px;
+    width: 55px;
     height: 55px;
 
     /* Define como elementos de bloco para ser flexivel */
@@ -63,6 +62,27 @@
 
     /* Centraliza horizontalmente */
     margin: 0 auto;
+}
+
+.header_left img {
+    width: 100px;
+    height: 100px;
+}
+
+.header_right {
+    font-size: 15px;
+    color: #4F5154;
+}
+
+/* Estilos para a div HEADER_ICONS */
+.header_icons p {
+    font-size: 16px;
+
+    padding-top: 5px;
+
+    letter-spacing: 1px;
+
+    font-weight: 700;
 }
 
 /* Estilos para o texto da página ativa */
@@ -82,20 +102,14 @@
 
     /* Define a grossura da fonte */
     font-weight: 500;
-
-    /* Adicionando espaço acima do elemento */
-    padding-top: 10px;
     
     /* Define a cor e tamanho da fonte */
     color: #2864AE;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .main {
     display: flex;
-    justify-content: space-between;
-    /* Alinha os elementos no topo */
-    align-items: flex-start;
 }
 
 .main h1 {
@@ -122,7 +136,9 @@
     text-decoration: none;
 
     font-size: 16px;
-    text-align: center;
+    text-align: left;
+    font-weight: 800;
+
 }
 
  /* Responsividade */
@@ -130,11 +146,6 @@
  @media (max-width: 1024px) {
     .header_icons p {
         display: none;
-    }
-
-    .header_left img {
-        width: 180px;
-        height: 120px;
     }
 
     .header_icons img {
@@ -191,13 +202,6 @@
     .header_icons {
         gap: 45px;
     }
-
-
-    /* Diminuindo a imagem GOV */
-    .header_left img {
-        width: 175px;
-        height: 100px;
-    }
     
     /* Diminuindo a imagem SUS */
     .header_right img {
@@ -213,11 +217,6 @@
         padding: 10px 20px;
         width: 100vw;
 
-    }
-
-    /* Fazendo a imagem GOV sumir */
-    .header_left img {
-        display: none;
     }
 
     .header_right img {

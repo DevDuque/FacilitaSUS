@@ -21,9 +21,6 @@ function isValidEmail(email) {
     // Salvar o email no localStorage
     localStorage.setItem('userEmail', email);
   
-    // Mostrar um alerta antes de redirecionar
-    alert("Encaminhando para a próxima página...");
-  
     // Redirecionar para outra página (substitua 'next-page.html' pela URL desejada)
     window.location.href = './Home.html';
   }

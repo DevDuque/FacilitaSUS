@@ -18,40 +18,40 @@
 
 </head>
 <body>
-    <div class="header">     
+    <div class="header">
+
+        <!-- Icone no topo direito -->
+        <div class="header_left">
+            <a href="./Home.html">
+                <img src="./assets/icons/sus.svg" alt="SUSLogo"/>
+            </a>
+        </div>
+    
         <!-- Icones no topo -->
         <div class="header_icons">
-            <!-- HomeIcon -->
-            <a href="./Home.html">
-                <img src="./assets/icons/home.svg" alt="HomeLogo" />
-                <p> Início </p>
-            </a>
-            
             <!-- ProtocoloIcon -->
-            <a href="./ProtocolosPage.html"  id="active">
+            <a href="./ProtocolosPage.html" id="active">
                 <img src="./assets/icons/linesActive.svg" alt="ProtocolosLogo"/>
                 <p> Protocolos </p>
             </a>
     
             <!-- AtendimentoIcon -->
             <a href="./Atendimento.html">
-
                 <img src="./assets/icons/post.svg" alt="AtendimentoLogo"/>
                 <p> Atendimento </p>
             </a>
     
-            <!-- NotificacaoIcon-->
-            <a href="#" id="linkNotification">
-                <img id="imageChange" src="./assets/icons/bell.svg" alt="NotificacaoLogo"/>
-                <p id="textChange"> Notificações </p>
+            <!-- PerfilIcon-->
+            <a href="./Perfil.html">
+                <img src="./assets/icons/user.svg" alt="PerfilLogo"/>
+                <p> Meu Perfil </p>
             </a>
         </div>
     
         <!-- Icone no topo direito -->
         <div class="header_right">
-            <a href="#">
-                <img src="./assets/icons/sus.svg" alt="SUSLogo"/>
-            </a>
+                <h2> Olá, <b style="color: #2864AE;">${username}</b> </h2>
+                <p> Seja bem-vindo(a)</p>
         </div>
     </div>
 
@@ -163,41 +163,10 @@
 
             </div>
         </div>
-
-        <div id ="notificationDiv" style="display: none;">
-            <div class="message">
-                <div class="content">
-                    <h1> Notificações </h1>
-                </div>
-                <a href="">
-                <div class="sub-content">
-                    <h2> Mensagem</h2>
-                    <h2> Tipo</h2>
-                </div>
-            <p> 
-                Conteúdo da mensagem... LALA
-                Conteúdo da mensagem... LALA
-                Conteúdo da mensagem... LALA
-                Conteúdo da mensagem... LALA
-            </p>
-                </a>
-            </div>
-            <div class="message">
-                <div class="content">
-                <div class="sub-content">
-                    <h2> Mensagem</h2>
-                    <h2> Tipo</h2>
-                </div>
-            <p>Conteúdo da mensagem... LALA
-                Conteúdo da mensagem... LALA
-                Conteúdo da mensagem... LALA
-                Conteúdo da mensagem... LALA</p>
-            </div>
-        </div>
     </div>
 
         <div class="footer">
-            <a href=""><button class="previous-button">Anterior</button></a>
+            <a href="./Protocolo2.html"><button class="previous-button">Anterior</button></a>
             <a href=""><button class="next-button">Próximo</button></a>
         </div>
 </body>
