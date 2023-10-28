@@ -44,8 +44,6 @@ section .content {
 
     justify-content: center;
     align-items: center;
-
-
 }
 
 section .content .image img {
@@ -89,7 +87,6 @@ section .content .form .input span {
    color: #2864AE;
    letter-spacing: 2px;
    font-weight: 800;
-
 }
 
 section .content .form .input input {
