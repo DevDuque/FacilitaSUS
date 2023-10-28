@@ -45,7 +45,7 @@
     align-items: center;
 
     /* Espaco de 30px entre eles */
-    gap: 30px;
+    gap: 50px;
 
     /* Centraliza horizontalmente a div no header */
     margin: 0 auto;
