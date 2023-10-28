@@ -165,32 +165,6 @@
     /* Alinha o texto ao centro horizontalmente */
         text-align: center; 
     }
-
-    
-    #notificationDiv {
-        /* Exibe a div */
-        display: block; 
-
-        /* Fixa a posição */
-        position: fixed; 
-        top: 100px;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #fff;
-        padding: 15px 0;
-        border-left: 0;
-
-        /* Ocupa toda a largura disponível */
-        width: 100%; 
-        /* Altura automática com base no conteúdo */
-        height: auto; 
-    }
-
-    .notification-open {
-        overflow: hidden;
-      }
-
 }
 
 @media (max-width: 640px) {
