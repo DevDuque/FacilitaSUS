@@ -3,7 +3,7 @@
 </h1>
   
 <p align="center">
-  <img src="./public/images/HomepageResponsive.png" alt="Form page image" />
+  <img src="./public/images/HomePageResponsive.png" alt="Form page image" />
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
   
   <br>
