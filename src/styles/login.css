@@ -126,18 +126,6 @@ section .content .form .input input[type = "submit"]:hover {
     transition-duration: 300ms;
 }
 
-section .content .form .remember  {
-    margin-bottom: 15px;
-    color: #2864AE;
-
-}
-
-section .content .form .remember label {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
 section .content .form .input p a{
     color: #2864AE;
     text-decoration: none;

@@ -85,6 +85,39 @@
                 <span>${cidade || 'N/A'}</span>
             </div>
         </div>
+        
+        <div class="overlay" id="overlay">
+            <div class="edit-container">
+                <!-- Conteúdo da caixa de edição aqui -->
+                <img src="./assets/icons/close.svg" alt="Fechar" class="fechar" onclick="fecharEdicao()" />
+                <div class="form">
+                    <form action="" id="editForm"> 
+                        <div class="input">
+                            <span>Usuário</span>
+                            <input type="text" placeholder="Insira o seu novo usuário" required />
+                        </div>
+    
+                        <div class="input">
+                            <span>Número de Telefone</span>
+                            <input type="tel" placeholder="Insira seu número" maxlength="14" data-js="Edit-js" required />
+                        </div>
+
+                        <div class="input">
+                            <span>Cidade</span>
+                            <input type="text" placeholder="Insira sua cidade" required />
+                        </div>
+                    </form>
+                </div>
+
+                <input type="submit" value="Salvar" form="editForm" />
+            </div>
+        </div>
+
+        <div class="settings-icon" id="settingsButton">
+            <img src="./assets/icons/settings.svg" alt="SettingsIcon" />
+        </div>
     </div>
+
+    <script src="./scripts/Edit.js"></script>
 </body>
 </html>
