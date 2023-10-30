@@ -1,9 +1,21 @@
-  // Obter o email armazenado no localStorage
-  const userEmail = localStorage.getItem('userEmail');
+function getUsuarioLogado() {
+    // Obter o email armazenado no localStorage
+    const userEmail = localStorage.getItem('userEmail');
+    // Obter o nome armazenado no localStorage
+    const userName = localStorage.getItem('userName');
 
-  // Obter o nome armazenado no localStorage
-  const userName = localStorage.getItem('userName');
-  
-  // Usar o userEmail e userName conforme necessário
-  console.log(`Email: ${userEmail}`);
-  console.log(`Nome: ${userName}`);
+    // Retornar os dados do usuário como um objeto
+    return { email: userEmail, nome: userName };
+}
+
+// Obtendo dados do usuário
+const usuarioLogado = getUsuarioLogado();
+
+// Atualizando o header_right com os dados do usuário
+const headerRightElement = document.querySelector('.header_right');
+headerRightElement.innerHTML = `
+    <h2> Olá, <b style="color: #2864AE;">${usuarioLogado.nome}</b> </h2>
+    <h2> Seja bem-vindo(a)</h2>
+`;
+
+console.log(usuarioLogado); // Certifique-se de que usuarioLogado não é null ou undefined

@@ -16,7 +16,6 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="./styles/login.css" />
 
-
 </head>
 <body>
     <section>
@@ -30,24 +29,24 @@
             </div>
             <div class="form">
                 <h2> Registrar </h2>
-                <form action="" id="loginForm"> 
+                <form action="" id="signInForm"> 
                     <div class="input">
                         <span>Nome</span>
-                        <input type="text" placeholder="Insira o seu nome" required />
+                        <input type="text" id="name" placeholder="Insira o seu nome" required />
                     </div>
 
                     <div class="input">
                         <span>Email</span>
-                        <input type="text" placeholder="Insira o seu Email" required />
+                        <input type="text" id="email" placeholder="Insira o seu Email" required />
                     </div>
 
                     <div class="input">
                         <span>Senha</span>
-                        <input type="password" placeholder="Insira a sua senha" required />
+                        <input type="password" id="password" placeholder="Insira a sua senha" required />
                     </div>
 
                     <div class="input">
-                        <input type="submit" value="Entrar" form="loginForm" />
+                        <input type="submit" value="Entrar" form="signInForm" />
                     </div>
 
                     <div class="input">
@@ -57,6 +56,8 @@
             </div>
         </div>
     </section>
-    <script src="./scripts/Signin.js"></script>
+
+    <!-- Script de Registro -->
+    <script src="./scripts/SignIn.js"></script>
 </body>
 </html>

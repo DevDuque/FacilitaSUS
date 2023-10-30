@@ -4,26 +4,38 @@ function isValidEmail(email) {
     return emailRegex.test(email);
   }
   
-  // Função para lidar com o envio do formulário
   function handleFormSubmit(event) {
-    event.preventDefault(); // Evita o comportamento padrão de envio do formulário
-  
-    // Obter o email inserido no formulário
+    event.preventDefault();
+
     const emailInput = document.querySelector('input[type="text"]');
+    const senhaInput = document.querySelector('input[type="password"]');
     const email = emailInput.value;
-  
+    const senha = senhaInput.value;
+
     // Verificar se o email é válido
     if (!isValidEmail(email)) {
         alert("O email inserido não possui um formato válido. Por favor, insira um email válido.");
-        return; // Impede o envio do formulário se o email não for válido
+        return;
     }
-  
-    // Salvar o email no localStorage
-    localStorage.setItem('userEmail', email);
-  
-    // Redirecionar para outra página (substitua 'next-page.html' pela URL desejada)
-    window.location.href = './Home.html';
-  }
+
+    // Obter usuários do localStorage
+    const usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Verificar se o email e a senha correspondem a algum usuário registrado
+    const usuarioEncontrado = usuariosRegistrados.find(usuario => usuario.email === email && usuario.senha === senha);
+
+    if (usuarioEncontrado) {
+        // Usuário autenticado,
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userName', usuarioEncontrado.nome);
+        
+        // Redireciona para a página desejada
+        window.location.href = './Home.html';
+    } else {
+        // Credenciais inválidas, exiba uma mensagem de erro
+        alert("Credenciais inválidas. Por favor, verifique seu email e senha.");
+    }
+}
   
   // Adicionar um ouvinte de evento ao formulário
   const loginForm = document.getElementById('loginForm');
