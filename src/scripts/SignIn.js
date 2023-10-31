@@ -48,6 +48,9 @@ document.getElementById("signInForm").addEventListener("submit", function(event)
         return;
     }
 
+    // Criar um hash da senha usando SHA256 (ou outro algoritmo de hash de sua escolha)
+    var senhaHash = CryptoJS.SHA256(senha).toString();
+
     // Função para formatar o nome com a primeira letra de cada palavra em maiúsculo
     function capitalizeWords(str) {
         return str.replace(/\b\w/g, function(l) {
@@ -66,7 +69,7 @@ document.getElementById("signInForm").addEventListener("submit", function(event)
         id: userId,
         nome: nomeFormatado,
         email: email,
-        senha: senha,
+        senha: senhaHash,
         nTelefone: null,
         Cidade: null
     };

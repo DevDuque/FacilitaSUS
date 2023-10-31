@@ -18,11 +18,14 @@ function isValidEmail(email) {
         return;
     }
 
+    // Criar um hash da senha inserida pelo usuário
+    var senhaHash = CryptoJS.SHA256(senha).toString();
+
     // Obter usuários do localStorage
     const usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios")) || [];
 
     // Verificar se o email e a senha correspondem a algum usuário registrado
-    const usuarioEncontrado = usuariosRegistrados.find(usuario => usuario.email === email && usuario.senha === senha);
+    const usuarioEncontrado = usuariosRegistrados.find(usuario => usuario.email === email && usuario.senha === senhaHash);
 
     if (usuarioEncontrado) {
         // Usuário autenticado,

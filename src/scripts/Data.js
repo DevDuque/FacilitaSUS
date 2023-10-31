@@ -17,5 +17,3 @@ headerRightElement.innerHTML = `
     <h2> Olá, <b style="color: #2864AE;">${usuarioLogado.nome}</b> </h2>
     <h2> Seja bem-vindo(a)</h2>
 `;
-
-console.log(usuarioLogado); // Certifique-se de que usuarioLogado não é null ou undefined
