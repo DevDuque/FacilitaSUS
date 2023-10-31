@@ -104,6 +104,10 @@ section .content .form .input input {
     font-weight: 800;
 }
 
+::placeholder {
+    color: #2864AE;
+}
+
 section .content .form .input input[type = "submit"] {
     width: 100%;
     padding: 15px 3%;
