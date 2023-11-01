@@ -45,7 +45,7 @@
     align-items: center;
 
     /* Espaco de 30px entre eles */
-    gap: 30px;
+    gap: 50px;
 
     /* Centraliza horizontalmente a div no header */
     margin: 0 auto;
@@ -65,8 +65,8 @@
 }
 
 .header_left img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 
 .header_right {
@@ -116,7 +116,7 @@
     font-weight: 700;
     font-size: 20px;
     font-style: italic;
-
+    
     color: #4F5154;
 }
 
@@ -146,17 +146,6 @@
  @media (max-width: 1024px) {
     .header_icons p {
         display: none;
-    }
-
-    .header_icons img {
-        /* Reduz o tamanho do logotipo em telas menores */
-        width: 55px; 
-        height: 55px;
-    }
-
-    .header_right img {
-        width: 50px;
-        height: 50px;
     }
 
     .main h1 {
@@ -204,10 +193,9 @@
     }
     
     /* Diminuindo a imagem SUS */
-    .header_right img {
-        width: 100px;
-        height: 100px;
-        padding-left: 20px;
+    .header_left img {
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -217,16 +205,6 @@
         padding: 10px 20px;
         width: 100vw;
 
-    }
-
-    .header_right img {
-        padding-left: 20px;
-    }
-
-    .header_icons img {
-        /* Diminuindo os icones */
-        width: 65px; 
-        height: 65px;
     }
 
     /* Voltando a deixar os elementos um abaixo do outro */
@@ -261,31 +239,6 @@
         font-size: 16px;
         text-align: center;
     }
-
-    
-    #notificationDiv {
-        /* Exibe a div */
-        display: block; 
-
-        /* Fixa a posição */
-        position: fixed; 
-        top: 100px;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #fff;
-        padding: 15px 0;
-        border-left: 0;
-
-        /* Ocupa toda a largura disponível */
-        width: 100%; 
-        /* Altura automática com base no conteúdo */
-        height: auto; 
-    }
-
-    .notification-open {
-        overflow: hidden;
-      }
 }
 
 @media (max-width: 640px) {
@@ -297,25 +250,27 @@
         width: 100vw; 
     }
 
-    .header_right img {
-        /* Reduz o tamanho dos ícones */
-        width: 60px; 
-        height: 60px;
-
-        /* Espaçamento à esquerda do ícone */
-        padding-left: 20px; 
+    .header_right {    
+            font-size: 12px;
+            color: #4F5154;
     }
 
     .header_icons img {
         /* Reduz o tamanho do logotipo em telas menores */
-        width: 55px; 
-        height: 55px;
+        width: 35px; 
+        height: 35px;
     }
 
     .header_icons {
         /* Espaço entre os ícones */
-        gap: 35px; 
+        gap: 20px; 
     }
+
+        /* Diminuindo a imagem SUS */
+        .header_left img {
+            width: 40px;
+            height: 40px;
+        }
 }
 
 @media(max-width: 475px) {
@@ -346,9 +301,14 @@
         text-align: center;
     }
 
-        .header_icons img {
-            /* Diminuindo os icones */
-            width: 40px; 
-            height: 40px;
-        }
+    .header_right {    
+        font-size: 8px;
+        color: #4F5154;
+    }
+
+    .header_icons img {
+        /* Reduz o tamanho do logotipo em telas menores */
+        width: 25px; 
+        height: 25px;
+    }
 }

@@ -1,12 +1,3 @@
-.sidebar {
-    padding: 10px 15px;
-
-    /* Largura com 40% do disponivel */
-    width: 40%;
-
-    /* Altura com 100% do disponivel */
-    height: 100vh;
-}
 
 .posts {
     /* Define a largura do container de protocolos */
@@ -17,7 +8,6 @@
 
     display: flex;
     flex-direction: column;
-    border-left: 2px solid #A7BFDE;
 }
 
 @media (max-width: 768px) {
@@ -87,74 +77,7 @@
         text-align: center;
     }
 
-    .sidebar
- {
-        display: flex;
-        /* Exibe os cards lado a lado */
-        flex-direction: row; 
 
-        /* Altura ajustável com base no conteúdo */
-        height: auto; 
-
-        /* Largura 100% do disponivel */
-        width: 100vw;
-
-        /* Retirando borda inserida anteriormente */
-        border-right: none;
-    }
-
-    .sidebar h1 {
-        /* Largura 100% do disponivel */
-        width: 100%;
-
-        /* Centraliza o título horizontalmente */
-        text-align: center;
-        font-size: 25px;
-    }
-
-    .sidebar_container {
-        display: flex;
-        
-        /* Permite que os elementos quebrem para a próxima linha quando não couberem */
-        flex-wrap: wrap;
-
-        /* Elementos alinhados no centro */
-        justify-content: center;
-
-        /* Distancia entre elementos */
-        gap: 12px;
-
-        /* Largura 100% do disponivel */
-        width: 100%;
-
-        /* Altura automática com base no conteúdo */
-        height: auto;
-    }
-
-    .sidebar_category {
-        /* Divide em duas colunas com espaço entre elas */
-        width: calc(30% - 10px);
-
-        /* Espaço entre os elementos */
-        margin-bottom: 15px;
-
-        /* Alinha o texto ao centro horizontalmente */
-        text-align: center; 
-
-        /* Adicione preenchimento interno para criar uma aparência de cartão */
-        padding: 10px; 
-
-        /* Adicione borda para criar uma aparência de cartão */
-        border: 2px solid #A7BFDE; 
-
-        /* Arredonda as bordas */
-        border-radius: 10px;
-    }
-
-    .sidebar_category p {
-        /* Espaçamento superior e inferior para o parágrafo */
-        margin: 5px 0; 
-    }
     
     /* Adicione espaço entre os elementos empilhados verticalmente */
     .post {
@@ -201,29 +124,6 @@
         flex-direction: column;
     }
  
-
-    .sidebar_category, .sidebar {
-        /* Largura 100% do disponivel */
-        width: 100vw; 
-
-        /* Altura automática com base no conteúdo */
-        height: auto; 
-
-        /* Remove a borda */
-        border: none;
-        
-        /* Espaçamento interno */
-        padding: 5px 10px;
-        
-        /* Espaçamento superior */
-        padding-top: 5px; 
-
-        /* Remove a borda direita */
-        border-right: none; 
-
-        /* Tirando margem embaixo */
-        margin-bottom: 0px;
-    }
 
     /* Estilos para a seção de posts em telas menores */
     .posts {
