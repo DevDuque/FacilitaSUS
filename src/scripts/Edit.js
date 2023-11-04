@@ -2,6 +2,8 @@
 let editUsernameInput, editTelefoneInput, editCidadeInput;
 
 window.onload = function() {
+    console.log(usuarioLogado);
+
     // Obtenha as referências dos elementos de input aqui, dentro do escopo de window.onload
     editUsernameInput = document.getElementById('editUsername');
     editTelefoneInput = document.getElementById('editTelefone');
@@ -44,15 +46,6 @@ window.onload = function() {
     
         localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
     
-        // Atualizando os spans com os novos valores
-        const usernameElement = document.querySelector('#username');
-        const nTelefoneElement = document.querySelector('#nTelefoneDisplay');
-        const cidadeElement = document.querySelector('#cidade');
-    
-        usernameElement.textContent = novoUsername;
-        nTelefoneElement.textContent = novoTelefone || 'N/A';
-        cidadeElement.textContent = novaCidade || 'N/A';
-    
         // Fechando a overlay
         fecharEdicao();
     });
@@ -60,11 +53,25 @@ window.onload = function() {
     // Preenchendo os campos com os dados do usuário
     const usernameElement = document.querySelector('#username');
     const emailElement = document.querySelector('#email');
-    const nTelefoneElement = document.querySelector('#nTelefone');
+    const nTelefoneElement = document.querySelector('#nTelefoneDisplay');
     const cidadeElement = document.querySelector('#cidade');
-    
+
     usernameElement.textContent = usuarioLogado.nome;
     emailElement.textContent = usuarioLogado.email;
     nTelefoneElement.textContent = usuarioLogado.nTelefone || 'N/A';
     cidadeElement.textContent = usuarioLogado.cidade || 'N/A';
 };
+
+function getUsuarioLogado() {
+    const usuarioLogadoJSON = localStorage.getItem('usuarioLogado');
+    return usuarioLogadoJSON ? JSON.parse(usuarioLogadoJSON) : {};
+}
+
+const usuarioLogado = getUsuarioLogado();
+
+// Atualizando o header_right com os dados do usuário
+const headerRightElement = document.querySelector('.header_right');
+headerRightElement.innerHTML = `
+    <h2> Olá, <b style="color: #2864AE;">${usuarioLogado.nome}</b> </h2>
+    <h2> Seja bem-vindo(a)</h2>
+`;

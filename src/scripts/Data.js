@@ -1,14 +1,8 @@
 function getUsuarioLogado() {
-    // Obter o email armazenado no localStorage
-    const userEmail = localStorage.getItem('userEmail');
-    // Obter o nome armazenado no localStorage
-    const userName = localStorage.getItem('userName');
-
-    // Retornar os dados do usuário como um objeto
-    return { email: userEmail, nome: userName };
+    const usuarioLogadoJSON = localStorage.getItem('usuarioLogado');
+    return usuarioLogadoJSON ? JSON.parse(usuarioLogadoJSON) : {};
 }
 
-// Obtendo dados do usuário
 const usuarioLogado = getUsuarioLogado();
 
 // Atualizando o header_right com os dados do usuário
