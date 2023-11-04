@@ -1,22 +1,52 @@
-// Declare as variáveis editUsernameInput, editTelefoneInput e editCidadeInput no escopo global
-let editUsernameInput, editTelefoneInput, editCidadeInput;
+// Pegando os dados do usuário que está logado
+function getUsuarioLogado() {
+    const usuarioLogadoJSON = localStorage.getItem('usuarioLogado');
+    return usuarioLogadoJSON ? JSON.parse(usuarioLogadoJSON) : {};
+}
+
+const usuarioLogado = getUsuarioLogado();
+
+function atualizarDadosUsuario() {
+    const usernameElement = document.querySelector('#username');
+    const emailElement = document.querySelector('#email');
+    const nTelefoneElement = document.querySelector('#nTelefoneDisplay');
+    const cidadeElement = document.querySelector('#cidade');
+
+    usernameElement.textContent = usuarioLogado.nome;
+    emailElement.textContent = usuarioLogado.email;
+    nTelefoneElement.textContent = usuarioLogado.nTelefone || 'N/A';
+    cidadeElement.textContent = usuarioLogado.cidade || 'N/A';
+
+    // Atualizando o header_right com os dados do usuário
+    const headerRightElement = document.querySelector('.header_right');
+    headerRightElement.innerHTML = `
+    <h2> Olá, <b style="color: #2864AE;">${usuarioLogado.nome}</b> </h2>
+    <h2> Seja bem-vindo(a)</h2>`;
+}
+ 
+atualizarDadosUsuario();
 
 window.onload = function() {
-    console.log(usuarioLogado);
 
     // Obtenha as referências dos elementos de input aqui, dentro do escopo de window.onload
-    editUsernameInput = document.getElementById('editUsername');
-    editTelefoneInput = document.getElementById('editTelefone');
-    editCidadeInput = document.getElementById('editCidade');
+    let editUsernameInput = document.getElementById('editUsername');
+    let editTelefoneInput = document.getElementById('editTelefone');
+    let editCidadeInput = document.getElementById('editCidade');
 
-    // Restante do seu código dentro de window.onload
-    const overlay = document.getElementById("overlay");
+    // Para pegar o botao de fechar e função para fechar
+    const closeButton = document.getElementById("closeButton");
+    closeButton.addEventListener("click", function() {
+        fecharEdicao();
+    });
+
+    // Para pegar o botão de configuração e abrir quando o botão de configurações é clicado
     const settingsButton = document.getElementById("settingsButton");
-    
-    // Abre a overlay quando o botão de configurações é clicado
     settingsButton.addEventListener("click", () => {
         overlay.style.display = "flex";
     });
+
+    // Para pegar o overlay
+    const overlay = document.getElementById("overlay");
     
     // Fecha a overlay se o usuário clicar fora dela
     overlay.addEventListener("click", (event) => {
@@ -29,8 +59,8 @@ window.onload = function() {
         overlay.style.display = "none";
     }
     
+    // Pegando o form da edição e salvando os dados inseridos
     const editForm = document.getElementById('editForm');
-    
     editForm.addEventListener('submit', function(event) {
         event.preventDefault();
     
@@ -43,6 +73,9 @@ window.onload = function() {
         usuarioLogado.nome = novoUsername;
         usuarioLogado.nTelefone = novoTelefone;
         usuarioLogado.cidade = novaCidade;
+
+        // Atualizando os dados na página
+        atualizarDadosUsuario();
     
         localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
     
@@ -62,16 +95,4 @@ window.onload = function() {
     cidadeElement.textContent = usuarioLogado.cidade || 'N/A';
 };
 
-function getUsuarioLogado() {
-    const usuarioLogadoJSON = localStorage.getItem('usuarioLogado');
-    return usuarioLogadoJSON ? JSON.parse(usuarioLogadoJSON) : {};
-}
 
-const usuarioLogado = getUsuarioLogado();
-
-// Atualizando o header_right com os dados do usuário
-const headerRightElement = document.querySelector('.header_right');
-headerRightElement.innerHTML = `
-    <h2> Olá, <b style="color: #2864AE;">${usuarioLogado.nome}</b> </h2>
-    <h2> Seja bem-vindo(a)</h2>
-`;
