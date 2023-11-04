@@ -67,22 +67,22 @@
 
             <div class="info">
                 <h2>Nome</h2>
-                <span>${username}</span>
+                <span id="username">${username}</span>
             </div>
         
             <div class="info">
                 <h2>Email</h2>
-                <span>${username}</span>
+                <span id="email">${username}</span>
             </div>
         
             <div class="info">
                 <h2>N de Telefone:</h2>
-                <span>${nTelefone || 'N/A'}</span>
+                <span id="nTelefoneDisplay">${nTelefone || 'N/A'}</span>
             </div>
         
             <div class="info">
                 <h2>Cidade:</h2>
-                <span>${cidade || 'N/A'}</span>
+                <span id="cidade">${cidade || 'N/A'}</span>
             </div>
         </div>
         
@@ -94,17 +94,17 @@
                     <form action="" id="editForm"> 
                         <div class="input">
                             <span>Usuário</span>
-                            <input type="text" placeholder="Insira o seu novo usuário" id="editUsername" required />
+                            <input id="editUsername" type="text" placeholder="Insira o seu novo usuário"required />
                         </div>
     
                         <div class="input">
                             <span>Número de Telefone</span>
-                            <input type="tel" placeholder="Insira seu número" maxlength="14" data-js="Edit-js" required />
+                            <input id="editTelefone" type="tel" placeholder="Insira seu número" maxlength="14"  required />
                         </div>
 
                         <div class="input">
                             <span>Cidade</span>
-                            <input type="text" placeholder="Insira sua cidade" required />
+                            <input id="editCidade" type="text" placeholder="Insira sua cidade" required />
                         </div>
                     </form>
                 </div>

@@ -70,8 +70,8 @@ document.getElementById("signInForm").addEventListener("submit", function(event)
         nome: nomeFormatado,
         email: email,
         senha: senhaHash,
-        nTelefone: null,
-        Cidade: null
+        nTelefone: '',
+        Cidade: ''
     };
 
     // Adicionar o novo usuário ao array
