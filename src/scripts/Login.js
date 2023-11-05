@@ -28,9 +28,8 @@ function isValidEmail(email) {
     const usuarioEncontrado = usuariosRegistrados.find(usuario => usuario.email === email && usuario.senha === senhaHash);
 
     if (usuarioEncontrado) {
-        // Usuário autenticado,
-        localStorage.setItem('userEmail', email);
-        localStorage.setItem('userName', usuarioEncontrado.nome);
+
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
         
         // Redireciona para a página desejada
         window.location.href = './Home.html';
