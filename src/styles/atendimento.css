@@ -24,6 +24,8 @@
 
 .message {
     border-bottom: 2px solid #A7BFDE;
+
+    overflow-y: auto;
 }
 
 .message p {

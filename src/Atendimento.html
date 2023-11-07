@@ -61,13 +61,7 @@
     <div class="main">
         <div class="sidebar">
             <h1> Notificações </h1>
-            <div class="message">
-                <div class="sub-content">
-                    <h2> Título da mensagem</h2>
-                    <h2> Tipo</h2>
-                </div>
-                <p> Conteúdo da mensagem... </p>
-            </div>
+
         </div>
     
 
@@ -84,10 +78,10 @@
                     <input list="options" id="altInput" name="altInput" placeholder="Tipo" />
                     
                     <datalist id="options">
+                        <option value="Ajuda">
                         <option value="Consulta">
                         <option value="Contato">
                         <option value="Exame">
-                        <option value="Ajuda">
                         <option value="Receita">
                     </datalist>
                 
@@ -99,7 +93,7 @@
             </div>
 
             <div class="submit">
-                <input type="submit" value="Enviar a mensagem" form="loginForm" form="messageForm"/>
+                <input type="submit" value="Enviar a mensagem" form="messageForm"/>
             </div>
 
         </form>
@@ -107,5 +101,5 @@
 </div>
 
 <script src="./scripts/Data.js"></script>
-
+<script src="./scripts/Message.js"></script>
 </body>

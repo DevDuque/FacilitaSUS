@@ -1,7 +1,10 @@
 // Pegando os dados do usuário que está logado
 function getUsuarioLogado() {
     const usuarioLogadoJSON = localStorage.getItem('usuarioLogado');
-    return usuarioLogadoJSON ? JSON.parse(usuarioLogadoJSON) : {};
+    return usuarioLogadoJSON ? JSON.parse(usuarioLogadoJSON) : {
+        nTelefone: null,
+        cidade: null
+    };
 }
 
 const usuarioLogado = getUsuarioLogado();
@@ -12,8 +15,8 @@ function atualizarDadosUsuario() {
     const nTelefoneElement = document.querySelector('#nTelefoneDisplay');
     const cidadeElement = document.querySelector('#cidade');
 
-    usernameElement.textContent = usuarioLogado.nome;
-    emailElement.textContent = usuarioLogado.email;
+    usernameElement.textContent = usuarioLogado.nome || 'Erro no Login, reporte esse erro no Atendimento';
+    emailElement.textContent = usuarioLogado.email || 'Reporte esse erro no Atendimento';
     nTelefoneElement.textContent = usuarioLogado.nTelefone || 'N/A';
     cidadeElement.textContent = usuarioLogado.cidade || 'N/A';
 
@@ -73,11 +76,11 @@ window.onload = function() {
         usuarioLogado.nome = novoUsername;
         usuarioLogado.nTelefone = novoTelefone;
         usuarioLogado.cidade = novaCidade;
+        
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
 
         // Atualizando os dados na página
         atualizarDadosUsuario();
-    
-        localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
     
         // Fechando a overlay
         fecharEdicao();
@@ -88,6 +91,8 @@ window.onload = function() {
     const emailElement = document.querySelector('#email');
     const nTelefoneElement = document.querySelector('#nTelefoneDisplay');
     const cidadeElement = document.querySelector('#cidade');
+
+
 
     usernameElement.textContent = usuarioLogado.nome;
     emailElement.textContent = usuarioLogado.email;
