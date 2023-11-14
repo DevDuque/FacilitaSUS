@@ -55,6 +55,9 @@ messageForm.addEventListener('submit', function(event) {
     } else {
         // Não há usuário logado, exibe uma mensagem de alerta
         alert('Nenhum usuário logado. Por favor, faça login para enviar mensagens.');
+
+        // Redirecionar para a página de login
+        window.location.href = "./LoginPage.html";
     }
 });
 

@@ -36,6 +36,7 @@ function isValidEmail(email) {
     } else {
         // Credenciais inválidas, exiba uma mensagem de erro
         alert("Credenciais inválidas. Por favor, verifique seu email e senha.");
+
     }
 }
   

@@ -2,7 +2,7 @@
     padding: 10px 15px;
 
     /* Largura com 40% do disponivel */
-    width: 60%;
+    width: 40%;
 
     /* Altura com 100% do disponivel */
     height: 100vh;
@@ -24,19 +24,19 @@
 
 .message {
     border-bottom: 2px solid #A7BFDE;
-
     overflow-y: auto;
 }
 
 .message p {
-    color:#5B5C60;
-    
+    color: #5B5C60;
     font-size: 16px;
     font-style: italic;
     text-align: center;
-
-    
     padding-bottom: 15px;
+    
+    white-space: nowrap; /* Evita a quebra de texto em várias linhas */
+    overflow: hidden; /* Esconde o texto que ultrapassa a largura do contêiner */
+    text-overflow: ellipsis; /* Exibe "..." quando o texto é cortado */
 }
 
 .messageInput {
