@@ -1,10 +1,15 @@
 .sidebar {
-
     /* Largura com 40% do disponivel */
     width: 40%;
 
     /* Altura com 100% do disponivel */
     height: 100vh;
+
+    overflow-y: auto;
+}
+
+.sidebar h1 {
+    padding: 10px;
 }
 
 .sub-content {

@@ -35,7 +35,33 @@ function salvarMensagemNoLocalStorage(usuarioLogado, mensagem) {
     mensagem.usuario = usuarioLogado;
     mensagensSalvas.push(mensagem);
     localStorage.setItem(`mensagens_${usuarioLogado}`, JSON.stringify(mensagensSalvas));
-    console.log(mensagensSalvas);
+
+    // Envie os dados para o Formsprее
+    enviarFormularioParaFormspree(usuarioLogado, mensagem);
+}
+
+function enviarFormularioParaFormspree(usuarioLogado, mensagem) {
+    const url = "https://formspree.io/f/xyyqaewq";  // Substitua pelo seu endereço de e-mail do Formsprее
+
+    // Obtenha as informações do usuário do localStorage
+    const usuarioInfo = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+    // Adicione nome e email do usuário à mensagem
+    mensagem.usuario = {
+        nome: usuarioInfo.nome,
+        email: usuarioInfo.email
+    };
+
+    // Envie uma solicitação POST para o Formsprее
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(mensagem),
+    })
+        .then(response => response.json())
+        .catch(error => console.error("Erro ao enviar formulário", error));
 }
 
 function carregarMensagens(usuarioLogado) {
