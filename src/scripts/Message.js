@@ -24,34 +24,8 @@ messageForm.addEventListener('submit', function(event) {
         // Salva a mensagem no Local Storage
         salvarMensagemNoLocalStorage(mensagem);
 
-        // Cria uma nova div com as classes de estilo
-        const newMessageDiv = document.createElement('div');
-        newMessageDiv.classList.add('message');
-
-        // Cria a estrutura interna da div com as classes de estilo
-        const subContentDiv = document.createElement('div');
-        subContentDiv.classList.add('sub-content');
-
-        const tituloElement = document.createElement('h2');
-        tituloElement.textContent = `${titulo}`;
-        subContentDiv.appendChild(tituloElement);
-
-        const tipoElement = document.createElement('h2');
-        tipoElement.textContent = `${tipo}`;
-        subContentDiv.appendChild(tipoElement);
-
-        const conteudoElement = document.createElement('p');
-        conteudoElement.textContent = `${conteudo}`;
-
-        // Adiciona os elementos à nova div
-        newMessageDiv.appendChild(subContentDiv);
-        newMessageDiv.appendChild(conteudoElement);
-
-        // Obtém a div da sidebar onde deseja adicionar a nova div
-        const sidebarDiv = document.querySelector('.sidebar');
-
-        // Adiciona a nova div à estrutura da sidebar
-        sidebarDiv.appendChild(newMessageDiv);
+        // Atualiza a exibição das mensagens
+        carregarMensagens(usuarioLogado);
     } else {
         // Não há usuário logado, exibe uma mensagem de alerta
         alert('Nenhum usuário logado. Por favor, faça login para enviar mensagens.');
@@ -81,3 +55,46 @@ function salvarMensagemNoLocalStorage(mensagem) {
         console.log(mensagensSalvas);
     }
 }
+
+// Função para carregar mensagens do Local Storage e exibi-las
+function carregarMensagens(usuarioLogado) {
+    const mensagensSalvas = JSON.parse(localStorage.getItem(`mensagens_${usuarioLogado}`)) || [];
+
+    const sidebarDiv = document.querySelector('.sidebar');
+
+    // Limpa as mensagens antigas antes de exibir as novas
+    sidebarDiv.innerHTML = '';
+
+    // Itera sobre as mensagens salvas e as exibe
+    mensagensSalvas.forEach(mensagem => {
+        const newMessageDiv = document.createElement('div');
+        newMessageDiv.classList.add('message');
+
+        const subContentDiv = document.createElement('div');
+        subContentDiv.classList.add('sub-content');
+
+        const tituloElement = document.createElement('h2');
+        tituloElement.textContent = `${mensagem.titulo}`;
+        subContentDiv.appendChild(tituloElement);
+
+        const tipoElement = document.createElement('h2');
+        tipoElement.textContent = `${mensagem.tipo}`;
+        subContentDiv.appendChild(tipoElement);
+
+        const conteudoElement = document.createElement('p');
+        conteudoElement.textContent = `${mensagem.conteudo}`;
+
+        newMessageDiv.appendChild(subContentDiv);
+        newMessageDiv.appendChild(conteudoElement);
+
+        sidebarDiv.appendChild(newMessageDiv);
+    });
+}
+
+// Ao carregar a página, verifica se o usuário está logado e carrega as mensagens
+document.addEventListener('DOMContentLoaded', function() {
+    const usuarioLogado = localStorage.getItem('usuarioLogado');
+    if (usuarioLogado) {
+        carregarMensagens(usuarioLogado);
+    }
+});
