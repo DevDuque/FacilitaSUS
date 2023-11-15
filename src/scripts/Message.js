@@ -37,10 +37,10 @@ function salvarMensagemNoLocalStorage(usuarioLogado, mensagem) {
     localStorage.setItem(`mensagens_${usuarioLogado}`, JSON.stringify(mensagensSalvas));
 
     // Envie os dados para o Formsprее
-    enviarFormularioParaFormspree(usuarioLogado, mensagem);
+    enviarFormularioParaFormspree(mensagem);
 }
 
-function enviarFormularioParaFormspree(usuarioLogado, mensagem) {
+function enviarFormularioParaFormspree(mensagem) {
     const url = "https://formspree.io/f/xyyqaewq";  // Substitua pelo seu endereço de e-mail do Formsprее
 
     // Obtenha as informações do usuário do localStorage
