@@ -15,8 +15,8 @@ function atualizarDadosUsuario() {
     const nTelefoneElement = document.querySelector('#nTelefoneDisplay');
     const cidadeElement = document.querySelector('#cidade');
 
-    usernameElement.textContent = usuarioLogado.nome || 'Erro no Login, reporte esse erro no Atendimento';
-    emailElement.textContent = usuarioLogado.email || 'Reporte esse erro no Atendimento';
+    usernameElement.textContent = usuarioLogado.nome || "Erro no Login";
+    emailElement.textContent = usuarioLogado.email || 'Reporte no Atendimento';
     nTelefoneElement.textContent = usuarioLogado.nTelefone || 'N/A';
     cidadeElement.textContent = usuarioLogado.cidade || 'N/A';
 
@@ -34,7 +34,34 @@ window.onload = function() {
     // Obtenha as referências dos elementos de input aqui, dentro do escopo de window.onload
     let editUsernameInput = document.getElementById('editUsername');
     let editTelefoneInput = document.getElementById('editTelefone');
+    let nTelefoneElement = document.getElementById('nTelefoneDisplay');
     let editCidadeInput = document.getElementById('editCidade');
+
+    // Adicione um listener para o evento de input no campo de edição
+    editTelefoneInput.addEventListener('input', function(event) {
+        // Obtém o valor do campo
+        let value = event.target.value;
+
+        // Remove caracteres não numéricos
+        value = value.replace(/\D/g, '');
+
+        // Aplica a máscara conforme o usuário digita
+        if (value.length <= 2) {
+            value = `(${value}`;
+        } else if (value.length <= 7) {
+            value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
+        } else if (value.length <= 12) {
+            value = `(${value.substring(0, 2)}) ${value.substring(2, 7)}-${value.substring(7)}`;
+        } else {
+            value = `(${value.substring(0, 2)}) ${value.substring(2, 7)}-${value.substring(7, 11)}`;
+        }
+
+        // Atualiza o valor no campo de edição
+        event.target.value = value;
+
+        // Atualiza o número de telefone na tela
+        nTelefoneElement.textContent = value !== '' ? value : 'N/A';
+    });
 
     // Para pegar o botao de fechar e função para fechar
     const closeButton = document.getElementById("closeButton");
@@ -61,6 +88,11 @@ window.onload = function() {
     function fecharEdicao() {
         overlay.style.display = "none";
     }
+
+    // Função para formatar o nome com a primeira letra de cada palavra em maiúsculo
+    function formatarNome(titulo) {
+        return titulo.replace(/\b\w/g, (match) => match.toUpperCase());
+    }
     
     // Pegando o form da edição e salvando os dados inseridos
     const editForm = document.getElementById('editForm');
@@ -68,9 +100,9 @@ window.onload = function() {
         event.preventDefault();
     
         // Obtendo os valores dos campos de input
-        const novoUsername = editUsernameInput.value;
+        const novoUsername = formatarNome(editUsernameInput.value);
         const novoTelefone = editTelefoneInput.value;
-        const novaCidade = editCidadeInput.value;
+        const novaCidade = formatarNome(editCidadeInput.value);
     
         // Atualizando os dados no localStorage
         usuarioLogado.nome = novoUsername;
@@ -86,18 +118,7 @@ window.onload = function() {
         fecharEdicao();
     });
     
-    // Preenchendo os campos com os dados do usuário
-    const usernameElement = document.querySelector('#username');
-    const emailElement = document.querySelector('#email');
-    const nTelefoneElement = document.querySelector('#nTelefoneDisplay');
-    const cidadeElement = document.querySelector('#cidade');
-
-
-
-    usernameElement.textContent = usuarioLogado.nome;
-    emailElement.textContent = usuarioLogado.email;
-    nTelefoneElement.textContent = usuarioLogado.nTelefone || 'N/A';
-    cidadeElement.textContent = usuarioLogado.cidade || 'N/A';
+    atualizarDadosUsuario();
 };
 
 

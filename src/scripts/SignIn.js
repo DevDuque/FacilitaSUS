@@ -52,14 +52,12 @@ document.getElementById("signInForm").addEventListener("submit", function(event)
     var senhaHash = CryptoJS.SHA256(senha).toString();
 
     // Função para formatar o nome com a primeira letra de cada palavra em maiúsculo
-    function capitalizeWords(str) {
-        return str.replace(/\b\w/g, function(l) {
-            return l.toUpperCase();
-        });
+    function formatarNome(titulo) {
+        return titulo.replace(/\b\w/g, (match) => match.toUpperCase());
     }
 
     // Formatar o nome com a primeira letra de cada palavra em maiúsculo
-    var nomeFormatado = capitalizeWords(nome);
+    var nomeFormatado = formatarNome(nome);
 
     // Gerar um ID único para o usuário usando UUID
     var userId = generateUUID();
