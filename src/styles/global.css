@@ -15,14 +15,16 @@
 }
 
 .close {
-        display: flex; 
-        margin-left: 20px;     
+        position: absolute;
+        display: flex;     
 
         top: 5px;
-        right: 35px;
-        cursor: pointer;
+        right: 25px;
+        
         width: auto;
-        height: 55px;
+        height: 30px;
+
+        cursor: pointer;
 }
 
 /* Estilos para a div HEADER */
@@ -83,6 +85,8 @@
 .header_right {
     font-size: 15px;
     color: #4F5154;
+
+    margin-right: 20px;
 }
 
 /* Estilos para a div HEADER_ICONS */
@@ -218,6 +222,14 @@
 
     }
 
+    .close {
+        top: 5px;
+        right: 15px;
+        
+        width: auto;
+        height: 30px;
+    }
+
     /* Voltando a deixar os elementos um abaixo do outro */
     .main {
         flex-direction: column; 
@@ -259,6 +271,14 @@
 
         /* Largura 100% do disponivel */
         width: 100vw; 
+    }
+
+    .close {
+        top: 5px;
+        right: 5px;
+        
+        width: auto;
+        height: 20px;
     }
 
     .header_right {    
