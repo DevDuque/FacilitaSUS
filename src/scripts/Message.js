@@ -31,10 +31,19 @@ messageForm.addEventListener('submit', function(event) {
 });
 
 function salvarMensagemNoLocalStorage(usuarioLogado, mensagem) {
+    const usuarioInfo = JSON.parse(localStorage.getItem('usuarioLogado'));
+    const usuarioId = usuarioInfo.id;
+
+    // Obter mensagens salvas ou criar um novo array vazio
     const mensagensSalvas = JSON.parse(localStorage.getItem(`mensagens_${usuarioLogado}`)) || [];
-    mensagem.usuario = usuarioLogado;
+    console.log('Mensagens salvas:', mensagensSalvas);
+
+    // Adicionar a mensagem ao array de mensagens
+    mensagem.usuario = { id: usuarioId };
     mensagensSalvas.push(mensagem);
-    localStorage.setItem(`mensagens_${usuarioLogado}`, JSON.stringify(mensagensSalvas));
+
+    // Salvar apenas as mensagens no localStorage, sem informações completas do usuário
+    localStorage.setItem(`mensagens_${usuarioLogado}`, JSON.stringify(mensagensSalvas.map(m => ({ ...m, usuario: { id: m.usuario.id } }))));
 
     // Envie os dados para o Formsprее
     enviarFormularioParaFormspree(mensagem);

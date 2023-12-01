@@ -9,13 +9,19 @@ function getUsuarioLogado() {
 
 const usuarioLogado = getUsuarioLogado();
 
+function getUsuariosRegistrados() {
+    return JSON.parse(localStorage.getItem("usuarios")) || [];
+}
+
 function atualizarDadosUsuario() {
     const usernameElement = document.querySelector('#username');
     const emailElement = document.querySelector('#email');
     const nTelefoneElement = document.querySelector('#nTelefoneDisplay');
     const cidadeElement = document.querySelector('#cidade');
 
-    usernameElement.textContent = usuarioLogado.nome || "Erro no Login";
+
+    // Atualizando os campos de usuário
+    usernameElement.textContent = usuarioLogado.nome;
     emailElement.textContent = usuarioLogado.email || 'Reporte no Atendimento';
     nTelefoneElement.textContent = usuarioLogado.nTelefone || 'N/A';
     cidadeElement.textContent = usuarioLogado.cidade || 'N/A';
@@ -25,6 +31,15 @@ function atualizarDadosUsuario() {
     headerRightElement.innerHTML = `
     <h2> Olá, <b style="color: #2864AE;">${usuarioLogado.nome}</b> </h2>
     <h2> Seja bem-vindo(a)</h2>`;
+
+        // Atualizando o usuário logado no bloco de usuários
+        const usuariosRegistrados = getUsuariosRegistrados();
+        const usuarioIndex = usuariosRegistrados.findIndex(user => user.id === usuarioLogado.id);
+    
+        if (usuarioIndex !== -1) {
+            usuariosRegistrados[usuarioIndex] = usuarioLogado;
+            localStorage.setItem("usuarios", JSON.stringify(usuariosRegistrados));
+        }
 }
  
 atualizarDadosUsuario();
