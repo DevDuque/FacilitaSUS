@@ -102,6 +102,12 @@ function carregarMensagens(usuarioLogado) {
     const sidebarDiv = document.querySelector('.sidebar');
     sidebarDiv.innerHTML = '';
 
+    // Adiciona o título na sidebar
+    const h1Element = document.createElement('h1');
+    h1Element.textContent = 'Mensagens Enviadas';
+    sidebarDiv.appendChild(h1Element);
+
+    // Adiciona as mensagens na sidebar
     mensagensSalvas
         .forEach(mensagem => {
             const newMessageDiv = document.createElement('div');
